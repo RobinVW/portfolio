@@ -1,0 +1,11 @@
+.navMenu{
+    font-size: 2.5rem;
+    cursor: pointer;
+    transform: translateY(-10px);
+    transition: color 1s;
+    
+    :hover{
+        color: red;
+    }
+           
+}

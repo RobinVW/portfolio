@@ -1,46 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Landing from '../components/Landing/Landing.jsx';
+import About from '../components/About/About.jsx';
+import Projects from '../components/Projects/Projects.jsx';
+
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<Landing client:load/> 
+		<!-- <div id='about'>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis sed ea quia, dicta ullam, nam eos atque, quos ut natus placeat quas dolor distinctio. Laudantium, animi rem? Nam praesentium eveniet voluptas, optio ut necessitatibus? Ex magni odit odio eligendi ipsam saepe nisi at aliquam temporibus! Recusandae, adipisci distinctio ab nemo cupiditate voluptates repellat, consequuntur quis excepturi sit minima. Obcaecati sit fuga ratione deserunt non accusantium, totam mollitia error dignissimos eaque ut modi cupiditate numquam qui impedit accusamus cum quaerat ipsum, maiores, magni ipsam dolor beatae? Voluptate maiores quos quisquam sequi praesentium magni suscipit modi eveniet ullam, quis laboriosam aspernatur sit! Molestiae, aut ut. Deserunt hic voluptatum magnam perferendis repellendus fugiat incidunt, illo fuga quas reiciendis itaque sint similique inventore, minus consequatur aut nemo. Praesentium mollitia ex molestiae necessitatibus beatae! Odio, ducimus est, rerum architecto inventore voluptatibus minus iste error quo voluptatum tempore! Soluta ea architecto in distinctio minima obcaecati rem nemo, praesentium sed error laboriosam, temporibus at doloribus nesciunt omnis placeat molestiae facere culpa nam dicta velit nihil. Voluptatem praesentium sunt fugiat exercitationem labore a quia vitae est ratione sed fugit ipsum molestias corporis tenetur, adipisci nisi aspernatur! Reiciendis consequatur fugiat, consectetur maiores necessitatibus corrupti dolorem laboriosam non minus ratione eligendi excepturi aspernatur quas pariatur quia, quasi, ducimus aut vitae! Voluptas velit provident repellat, voluptatem doloribus autem odit cum maiores culpa quos est animi, tempore nisi ab cupiditate quae eius iure totam a quidem expedita nulla atque porro quibusdam. Alias reiciendis beatae dolorem pariatur quos, possimus optio numquam! Eius laboriosam molestias dolorum sapiente ipsam praesentium velit adipisci, delectus quos quasi in ut. Nemo beatae facilis in iure animi voluptatum itaque quae sunt, dolorum officiis consectetur amet sit accusantium nulla ab accusamus commodi consequatur illo cupiditate. Asperiores, exercitationem. Id aperiam laboriosam maxime ex. Repellendus numquam deserunt exercitationem animi praesentium? Minus doloremque ipsum corporis nesciunt. Est nisi vero consequatur ipsa commodi pariatur dignissimos saepe fugiat expedita totam explicabo tempore dolorem a recusandae nam, dolorum, voluptatem et distinctio possimus esse iste aspernatur error? Exercitationem illo voluptatem reprehenderit mollitia alias provident consectetur minus est laboriosam rerum perferendis ad nobis cupiditate commodi eos, molestiae voluptas quo tempora id officiis numquam similique aliquam? Consequuntur reiciendis amet expedita magni voluptas eveniet numquam, optio consectetur magnam animi deleniti temporibus adipisci recusandae obcaecati doloremque. Amet rem ut placeat libero maiores esse, quaerat aut eaque unde nesciunt, repellat dolorum, quos dicta assumenda vel nulla hic aliquam quibusdam perspiciatis similique totam!
+		</div> -->
+		<About />
+		<Projects />
 	</main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
+	@font-face {
+		font-family: 'BestermindRegular';
+		src: url('./assets/fonts/Bestermind/BestermindRegular.ttf'); 
+		src: url('./assets/fonts/Bestermind/BestermindRegular.ttf') format('embedded-opentype'), 
+			 url('./assets/fonts/Bestermind/BestermindRegular.ttf')  format('truetype'), 
 	}
+
 	h1 {
 		font-size: 3rem;
 		font-weight: 800;
